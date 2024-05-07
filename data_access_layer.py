@@ -24,6 +24,12 @@ class DataAccessLayer(object):
 
         return users
 
+    def get_user(self, user_id):
+        cursor = self.connection.cursor()
+        cursor.execute("SELECT id, username FROM user where id = ?", (user_id,))
+        results = cursor.fetchone()
+        return User(user_id=results[0], user_name=results[1])
+
     def create_user(self, user):
         cursor = self.connection.cursor()
         try:
