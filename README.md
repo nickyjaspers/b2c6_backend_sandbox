@@ -5,5 +5,5 @@ This is a small python backend application to play with.
 
 ## responsibilities
 
-- talk to a database
-- provide data through an api
+- Talk to a database: In my case a MariaDB database.
+- Provide data through a rest api 
